@@ -1,5 +1,5 @@
 import ContactForm from "./ContactForm"
-import ContactDetails from "./ContactDetails"
+
 const Contact = () => {
   return (
     <div className="w-11/12">

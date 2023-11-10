@@ -25,6 +25,12 @@ const Project = () => {
 
   const project = [
     {
+      name:"scholarSync",
+      image:sce,
+      url:"https://scholar-ync.vercel.app/",
+      stacks:[git,vsl,exp,nj,mongo,rt,redx,cjs,ts]
+    },
+    {
       name:"chair",
       image:chair,
       url:"https://3-d-chair-ui.vercel.app/",
@@ -64,12 +70,7 @@ const Project = () => {
       url:"https://password-generator-mu-one.vercel.app/",
       stacks:[git, vsl,j,tail,rt,redx]
     },
-    {
-      name:"scholarSync",
-      image:sce,
-      url:"https://scholar-ync.vercel.app/",
-      stacks:[git,vsl,exp,nj,mongo,rt,redx,cjs,ts]
-    }
+    
 
   ]
   return (

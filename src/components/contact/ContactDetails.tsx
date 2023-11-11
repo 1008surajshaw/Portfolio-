@@ -10,25 +10,25 @@ const ContactDetails = () => {
   const contactDetails: {
     icon: IconName;
     heading: string;
-    description: string;
+   
     details: string;
   }[] = [
     {
       icon: 'HiChatBubbleLeftRight',
-      heading: 'Chat on us',
-      description: 'Our friendly team is here to help.',
+      heading: 'Chat with me',
+      
       details: 'iamsuraj3000@gmail.com',
     },
     {
       icon: 'BiWorld',
-      heading: 'Visit us',
-      description: 'Come and say hello at our office HQ.',
+      heading: 'Location',
+     
       details: '1, tollygung circular road kolkata-700053',
     },
     {
       icon: 'IoCall',
       heading: 'Call us',
-      description: 'Mon - Fri From 8am to 5pm',
+      
       details: '+91 12345678',
     },
   ];
@@ -59,7 +59,7 @@ const ContactDetails = () => {
               <Icon size={25} />
               <h1 className='text-lg font-semibold text-richblack-5'>{ele?.heading}</h1>
             </div>
-            <p className='font-medium'>{ele?.description}</p>
+            
             <p className='font-semibold'>{ele?.details}</p>
           </div>
         );

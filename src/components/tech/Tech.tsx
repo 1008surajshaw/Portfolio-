@@ -12,7 +12,7 @@ import db from "../../assets/technologyStack/md.png"
 import postg from "../../assets/technologyStack/Postgresql_elephant.svg.png"
 import git from "../../assets/technologyStack/git.png"
 import Card from "./Card"
-
+import { Element } from 'react-scroll';
 const Tech = () => {
   const stacks = [
     {
@@ -84,7 +84,7 @@ const Tech = () => {
   return (
  
 
-   
+    <Element name="tech" smooth={true} duration={500}>
     <div className="bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500  flex flex-col min-h-screen w-10/12 mx-auto lg:flex-row items-center justify-center mt-12 bg-gray-200 p-8 lg:p-0 lg:pb-16 bg-richblack-200 ">
   
       <div className="lg:w-1/2 lg:flex lg:items-center lg:justify-center lg:pl-8">
@@ -94,7 +94,7 @@ const Tech = () => {
             <div>What does he do?</div>
           </div>
           <div className="text-base lg:text-lg text-richblack-25">
-            He creates elegant, logical web and mobile app solutions. In his hobby time, he designs.
+            He creates elegant, logical web solutions. In his hobby time, he designs.
           </div>
           <div className="text-6xl lg:text-8xl font-bold text-blue-600 mt-4">
             Think. Code. Debug.
@@ -108,7 +108,7 @@ const Tech = () => {
         ))}
       </div>
     </div>
-
+    </Element>
    
   );
   

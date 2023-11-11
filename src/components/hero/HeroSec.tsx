@@ -2,13 +2,15 @@ import { useState,useEffect } from "react";
 import {motion} from "framer-motion"
 import uim from "../../assets/userAsset/avatar-smile.webp"
 import CV from "../../assets/Suraj__CV.pdf"
+import {Element} from "react-scroll"
+
 const  HeroSec = () => {
     const textToType =
-    '"A fresher with experience", this line says exactly who he is. He is a software developer who crafts beautiful web and apps. His perfect balance of technical & managerial skills sets him apart from the crowd.';
+    '"A fresher with experience", this line says exactly who he is. He is a software developer who crafts beautiful web . His perfect balance of technical & managerial skills sets him apart from the crowd.';
 
   const [displayText, setDisplayText] = useState('');
   const openPdf = () => {
-    window.open(CV, '_blank'); // This will open the PDF in a new tab/window
+    window.open(CV, '_blank');
   };
   useEffect(() => {
     let index = 0;
@@ -19,12 +21,13 @@ const  HeroSec = () => {
       } else {
         clearInterval(intervalId);
       }
-    }, 50);
+    }, 50); 
 
     return () => clearInterval(intervalId);
   }, [textToType]);
   return (
-    <div className="w-11/12">
+    <Element name="home" smooth={true} duration={500}>
+    <div className="w-11/12 ">
     <div className="bg-gradient-to-r from-brown-900 to-pink-600 flex flex-col lg:flex lg:flex-row-reverse min-h-screen w-11/12 max-w-maxContent mx-auto items-center justify-center text-richblack-25 relative pt-16 lg:p-8 bg-richblack-900 ">
 
         <div className="lg:w-1/2 lg:pr-8">
@@ -63,6 +66,7 @@ const  HeroSec = () => {
 
       </div>
     </div>
+    </Element>
   )
 }
 

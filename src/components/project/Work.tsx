@@ -5,9 +5,10 @@ const Work = (props: any) => {
   const { pro,index } = props;
   return (
     <motion.div
-      className="flex flex-col justify-center mx-auto w-10/12"
+      className=" flex flex-col justify-center mx-auto w-10/12 space-y-5"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
+      
     >
       <Link to={pro.url} target="_blank " >
         <motion.div className={`relative w-full flex flex-col `}>
@@ -15,7 +16,7 @@ const Work = (props: any) => {
             src={pro.image}
             alt={pro.name}
             style={{ width: '100%' }}
-            className="w-full lg:h-[400px] rounded-md"
+            className={`w-full lg:h-[400px] rounded-md left-0`}
           />
           <motion.div
             className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75 text-white text-center opacity-0"

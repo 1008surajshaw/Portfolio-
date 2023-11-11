@@ -21,6 +21,9 @@ import mui from "../../assets/stack/MaterialUI.svg"
 import cjs from "../../assets/stack/ChartJs.svg"
 import ts from "../../assets/stack/Typescript.svg"
 import {motion} from "framer-motion"
+import { Link } from 'react-router-dom';
+
+import { Element, animateScroll as scroll, scroller } from 'react-scroll';
 const Project = () => {
 
   const project = [
@@ -74,7 +77,8 @@ const Project = () => {
 
   ]
   return (
-    <div className="w-10/12 text-richblack-800 mt-8 flex flex-col justify-center ">
+    <Element name="pro" smooth={true} duration={500}>
+    <div className="w-10/12 text-richblack-800 mt-8 flex flex-col justify-center space-y-6 ">
     <motion.div
       initial={{ x: "100vw" }} // Initial position outside the viewport from the right
       animate={{ x: 0 }} // Animation to move to position (0) from right
@@ -82,15 +86,19 @@ const Project = () => {
     >
       <p className="text-7xl">Project</p>
     </motion.div>       
-        
-        {project.map((pro, index) => (
-          <div key={index} className={`p-5 ${5 % 2 ==0 ? "pl-0" :"pr-0"}`}  >
-            <Work pro={pro} index={index} />
-          </div>
-        ))}
-        
+      <div>
+      {project.map((pro, index) => (
+            <div key={index} className={`p-5 ${index % 2 === 0 ? "pl-0" : "pl-0"}`}>
+              {/* Use scroller.scrollTo to scroll to the corresponding Work section */}
+              <Link to={pro.url} onClick={() => scroller.scrollTo(pro.name, { smooth: true, duration: 500 })}>
+                <Work pro={pro} index={index} />
+              </Link>
+            </div>
+          ))}
+      </div> 
     
     </div>
+    </Element>
   );
 }
 

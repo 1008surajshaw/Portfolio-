@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
-import { Element } from 'react-scroll';
+
 import { Link as ScrollLink } from 'react-scroll';
 
 const Footer = () => {

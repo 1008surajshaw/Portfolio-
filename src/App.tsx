@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Tech from "./components/tech/Tech";
 import Project from "./components/project/Project";
 import Contact from "./components/contact/Contact";
-import { useState } from "react";
+
 
 
 function App() {

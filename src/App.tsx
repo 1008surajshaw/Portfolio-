@@ -5,19 +5,23 @@ import Home from './pages/Home'
 import Tech from "./components/tech/Tech";
 import Project from "./components/project/Project";
 import Contact from "./components/contact/Contact";
+import { useState } from "react";
+
+
 function App() {
- 
+  
 
   return (
-    <div className="w-screen min-h-screen bg-white flex flex-col font-inter overflow-y-hidden">
-      <Navbar/>
+    <div className="w-screen min-h-screen  flex flex-col font-inter overflow-y-hidden">
+      
+      <Navbar />
       <Routes>
-         <Route path="/" element={<Home/>}/>
+         <Route path="/" element={<Home />}/>
          <Route path="/project" element={<Tech/>}/>
          <Route path="/tech" element={<Project/>}/>
          <Route path="/contact" element={<Contact/>}/>
-
       </Routes>
+      
        
     </div>
   )

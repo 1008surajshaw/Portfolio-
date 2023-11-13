@@ -78,6 +78,7 @@ const Project = () => {
   ]
   return (
     <Element name="pro" smooth={true} duration={500}>
+    <div className="w-screen bg-richblue-400 flex justify-center items-center mt-8 pb-8 mx-auto">
     <div className="w-10/12 text-richblack-800 mt-8 flex flex-col justify-center space-y-6 ">
     <motion.div
       initial={{ x: "100vw" }} // Initial position outside the viewport from the right
@@ -88,7 +89,7 @@ const Project = () => {
     </motion.div>       
       <div>
       {project.map((pro, index) => (
-            <div key={index} className={`p-5 ${index % 2 === 0 ? "pl-0" : "pl-0"}`}>
+            <div key={index} className={`p-5 `}>
               {/* Use scroller.scrollTo to scroll to the corresponding Work section */}
               <Link to={pro.url} onClick={() => scroller.scrollTo(pro.name, { smooth: true, duration: 500 })}>
                 <Work pro={pro} index={index} />
@@ -97,6 +98,7 @@ const Project = () => {
           ))}
       </div> 
     
+    </div>
     </div>
     </Element>
   );

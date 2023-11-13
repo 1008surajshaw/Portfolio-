@@ -19,6 +19,7 @@ const Navbar = () => {
     setShowNav(!showNav);
   };
 
+  
   return (
     <div className={`fixed bg-richblack-25 top-0 left-0 right-0 z-50 flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 ${location.pathname !== '/' ? 'bg-richblack-800' : ''} transition-all duration-200`}>
       <div className="flex w-11/12 max-w-maxContent items-center justify-between">

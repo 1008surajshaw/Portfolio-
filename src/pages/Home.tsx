@@ -3,16 +3,18 @@ import Socialbar from "../components/hero/Socialbar";
 import Project from "../components/project/Project";
 import Tech from "../components/tech/Tech";
 import HeroSec from "../components/hero/HeroSec";
+import Footer from "./Footer";
 
 const Home = () => {
 
   return (
-    <div className="mt-5 relative  mx-auto flex flex-col w-11/12 items-center max-w-maxContent text-white justify-between bg-gradient-to-r from-white to-richblack-50">
+    <div className="mt-5 relative  mx-auto flex flex-col items-center  text-white justify-between ">
       <Socialbar />
       <HeroSec/>
       <Tech/>
       <Project/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }

@@ -8,7 +8,7 @@ const Socialbar = () => {
     
    
   return (
-    <div className="w-1/15 xl:flex flex-col fixed left-[3rem] top-1/2 gap-7 hidden md:block bg-white">
+    <div className="w-1/15 xl:flex flex-col fixed left-[3rem] top-1/2 gap-7 hidden md:block ">
     <motion.div className="pb-3"
        whileHover={{ x: 10,scale: 1.5  }}
        initial={{ x: 0 }}

@@ -1,8 +1,9 @@
 import { useState,useEffect } from "react";
-import {motion} from "framer-motion"
+import {motion,useAnimation} from "framer-motion"
 import uim from "../../assets/userAsset/avatar-smile.webp"
-import CV from "../../assets/Suraj__CV.pdf"
+import CV from "../../assets/SurajCV.pdf"
 import {Element} from "react-scroll"
+import bckimg from "../../assets/userAsset/blob vector.png"
 
 const  HeroSec = () => {
     const textToType =
@@ -25,13 +26,33 @@ const  HeroSec = () => {
 
     return () => clearInterval(intervalId);
   }, [textToType]);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const motionSequence = async () => {
+      while (true) {
+       
+        await controls.start({ rotate: 360, transition: { duration: 5, loop: Infinity, type: "reverse" }, });
+       
+        await controls.start({ y: 20, transition: { duration: 1 } });
+        await controls.start({ y: -20, transition: { duration: 1 } });
+       
+         await controls.start({ rotate: 0, transition: { duration: 5 } });
+      }
+    };
+
+    motionSequence();
+  }, [controls]);
+
   return (
     <Element name="home" smooth={true} duration={500}>
-    <div className="w-11/12 ">
-    <div className="bg-gradient-to-r from-brown-900 to-pink-600 flex flex-col lg:flex lg:flex-row-reverse min-h-screen w-11/12 max-w-maxContent mx-auto items-center justify-center text-richblack-25 relative pt-16 lg:p-8 bg-richblack-900 ">
+    <div className="w-screen bg-gradient-to-r from-brown-900 to-pink-600">
+      <div className=" flex flex-col lg:flex lg:flex-row-reverse min-h-screen  w-11/12 mx-auto items-center justify-center text-richblack-25 relative pt-16 lg:p-8  ">
 
-        <div className="lg:w-1/2 lg:pr-8">
-          <img src={uim} className="mx-auto" width={400} height={400} alt=""/>
+        <div className="lg:w-1/2 lg:pr-8 relative z-10">
+          <img src={uim} className="mx-auto relative z-10" width={400} height={400} alt=""/>
+          <motion.img src={bckimg} animate={controls} className="absolute top-[12%] right-[15%] object-cover" width={500} height={500} style={{ zIndex: -1 }} alt="" />
+
         </div>
 
         <div className="w-full lg:w-1/2 gap-3 leading-6 lg:pl-8 lg:pr-8 overflow-y-hidden">
@@ -63,7 +84,6 @@ const  HeroSec = () => {
             </motion.button>
           </div>
         </div>
-
       </div>
     </div>
     </Element>

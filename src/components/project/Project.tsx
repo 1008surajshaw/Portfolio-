@@ -23,7 +23,7 @@ import ts from "../../assets/stack/Typescript.svg"
 import {motion} from "framer-motion"
 import { Link } from 'react-router-dom';
 
-import { Element, animateScroll as scroll, scroller } from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
 const Project = () => {
 
   const project = [

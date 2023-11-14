@@ -26,15 +26,17 @@ import { Link } from 'react-router-dom';
 import { Element, scroller } from 'react-scroll';
 const Project = () => {
 
+
+
   const project = [
     {
-      name:"scholarSync",
+      name:"ScholarSync",
       image:sce,
       url:"https://scholar-ync.vercel.app/",
-      stacks:[git,vsl,exp,nj,mongo,rt,redx,cjs,ts]
+      stacks:[redx,vsl,exp,nj,mongo,rt,git,cjs,ts]
     },
     {
-      name:"chair",
+      name:"Chair",
       image:chair,
       url:"https://3-d-chair-ui.vercel.app/",
       stacks:[ht,cs,git,vsl]
@@ -50,7 +52,7 @@ const Project = () => {
     },
     
     {
-      name:"tic-tac-toe",
+      name:"Tic-tac-toe",
       image:pg,
       url:"https://3-d-chair-ui.vercel.app/",
       stacks:[git, vsl,j,tail]
@@ -62,13 +64,13 @@ const Project = () => {
       stacks:[git, vsl,j,tail,tail,mui]
     },
     {
-      name:"password_generator",
+      name:"Password_generator",
       image:wp,
       url:"https://password-generator-mu-one.vercel.app/",
       stacks:[git, vsl,j,tail,rt]
     },
     {
-      name:"shopingCart",
+      name:"ShopingCart",
       image:tic,
       url:"https://password-generator-mu-one.vercel.app/",
       stacks:[git, vsl,j,tail,rt,redx]
@@ -78,14 +80,15 @@ const Project = () => {
   ]
   return (
     <Element name="pro" smooth={true} duration={500}>
-    <div className="w-screen bg-richblue-400 flex justify-center items-center mt-8 pb-8 mx-auto">
-    <div className="w-10/12 text-richblack-800 mt-8 flex flex-col justify-center space-y-6 ">
+    <div className="w-screen bg-richblue-400 flex justify-center items-center  pb-8 mx-auto">
+    <div className="w-10/12 text-richblack-800 flex flex-col justify-center space-y-6 ">
     <motion.div
-      initial={{ x: "100vw" }} // Initial position outside the viewport from the right
-      animate={{ x: 0 }} // Animation to move to position (0) from right
+      className="flex justify-center mx-auto mb-7"
+      initial={{ x: "100vw" }} 
+      animate={{ x: 0 }}
       transition={{ type: "spring", duration: 10, stiffness: 500 }}
     >
-      <p className="text-7xl">Project</p>
+      <p className="text-7xl pt-10 mx-auto font-extrabold">Project</p>
     </motion.div>       
       <div>
       {project.map((pro, index) => (

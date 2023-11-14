@@ -7,17 +7,17 @@ const Footer = () => {
   return (
     <footer className='bg-richblack-900 text-richblack-5 min-h-fit w-screen z-50  '>
       <div className='w-8/12 mx-auto pt-5'>
-        <div className='flex flex-col justify-between lg:flex'>
+        <div className='flex flex-col justify-between lg:flex-row'>
             <div className='flex flex-col'>
                 <p className='text-7xl font-extrabold'>Suraj</p>
               
                 <p className='text-7xl font-extrabold'>Shaw</p>
               
               
-                <p className='text-3xl font-bold'>Full stack developer</p>
+                <p className='text-3xl font-bold'>Full Stack Developer</p>
               
             </div>
-            <div className='flex flex-col font-semibold text-2xl cursor-pointer'>
+            <div className='flex flex-col font-semibold text-xl cursor-pointer'>
              
              <ScrollLink 
              to="home" 
@@ -25,7 +25,7 @@ const Footer = () => {
              smooth={true}
              duration={500}>
 
-               <p>home</p>
+               <p>Home</p>
              </ScrollLink>
               
             <ScrollLink spy={true}
@@ -33,7 +33,7 @@ const Footer = () => {
                   duration={500}
                   to="tech">
 
-                 <p>tech</p>
+                 <p>Tech</p>
               </ScrollLink>
 
               
@@ -42,7 +42,7 @@ const Footer = () => {
                   duration={500}
                   to="pro">
 
-                  <p>project</p>
+                  <p>Project</p>
              </ScrollLink>
                
             </div>

@@ -23,18 +23,18 @@ const Work = (props: any) => {
             whileHover={{ opacity: 1 }}
             whileTap={{ opacity: 0 }}
           >
-            <motion.h2 className="text-xl">{pro.name}</motion.h2>
-             <div className="flex flex-col">
+            <motion.h2 className="text-3xl m-3 font-thin">{pro.name}</motion.h2>
+             <div className="flex flex-row">
               {
                 pro?.stacks.map((itm:any,idx:number) =>(
-                  <div key={idx} className="flex flex-col">
+                  <div key={idx} className="flex flex-col m-3 font-extrabold hover:scale-x-100">
                     <img src={itm} width={30} height={30}/>
                   </div>
                 ))
               }
              </div>
              
-          <div className="text-8xl top-0 left-0">{index+1}</div>
+          <div className="text-8xl top-0 left-0 m-3 font-extrabold">{index+1}</div>
           </motion.div>
         </motion.div>
       </Link>

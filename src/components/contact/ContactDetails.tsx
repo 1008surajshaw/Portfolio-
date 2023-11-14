@@ -24,13 +24,8 @@ const ContactDetails = () => {
       heading: 'Location',
      
       details: '1, tollygung circular road kolkata-700053',
-    },
-    {
-      icon: 'IoCall',
-      heading: 'Call us',
-      
-      details: '+91 12345678',
-    },
+    }
+    
   ];
 
   return (
@@ -45,9 +40,6 @@ const ContactDetails = () => {
             break;
           case 'BiWorld':
             Icon = BiWorld;
-            break;
-          case 'IoCall':
-            Icon = IoCall;
             break;
           default:
             break;

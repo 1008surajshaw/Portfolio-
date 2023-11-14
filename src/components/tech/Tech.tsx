@@ -86,7 +86,7 @@ const Tech = () => {
 
     <Element name="tech" smooth={true} duration={500}>
     <div className="bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500   ">
-      <div className="w-10/12 flex flex-col min-h-screen mx-auto  lg:flex-row items-center justify-center mt-12 bg-gray-200 p-8 lg:p-0 lg:pb-16 ">
+      <div className="w-10/12 flex flex-col space-y-4 min-h-screen mx-auto  lg:flex-row items-center justify-center  bg-gray-200 p-8 lg:p-0 lg:pb-16 ">
       <div className="lg:w-1/2 lg:flex lg:items-center lg:justify-center lg:pl-8">
         <div className="text-center lg:text-left">
           <div className="flex gap-2 p-2 items-center">

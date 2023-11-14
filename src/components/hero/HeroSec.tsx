@@ -47,7 +47,7 @@ const  HeroSec = () => {
   return (
     <Element name="home" smooth={true} duration={500}>
     <div className="w-screen bg-gradient-to-r from-brown-900 to-pink-600">
-      <div className=" flex flex-col lg:flex lg:flex-row-reverse min-h-screen  w-11/12 mx-auto items-center justify-center text-richblack-25 relative pt-16 lg:p-8  ">
+      <div className=" flex flex-col lg:flex lg:flex-row-reverse  min-h-screen max-h-fit w-11/12 mx-auto items-center justify-center text-richblack-25 relative pt-16 lg:p-8  ">
 
         <div className="lg:w-1/2 lg:pr-8 relative z-10">
           <img src={uim} className="mx-auto relative z-10" width={400} height={400} alt=""/>

@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/technologyStack/next-js.webp';
+import logo from '../../assets/favicon_io/favicon.ico';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link as ScrollLink } from 'react-scroll';
@@ -23,9 +23,13 @@ const Navbar = () => {
   return (
     <div className={`fixed bg-richblack-25 top-0 left-0 right-0 z-50 flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 ${location.pathname !== '/' ? 'bg-richblack-800' : ''} transition-all duration-200`}>
       <div className="flex w-11/12 max-w-maxContent items-center justify-between">
-        <Link to="/">
+        <ScrollLink 
+                  to="home"  
+                  spy={true}
+                  smooth={true}
+                  duration={500}>
           <img src={logo} width={50} height={12} alt="Logo" loading="lazy" />
-        </Link>
+        </ScrollLink>
   
         <nav className={`${showNav ? 'block' : 'hidden'} md:block`}>
           <ul className="flex gap-x-6 text-richblack-25">
@@ -54,9 +58,9 @@ const Navbar = () => {
           </ul>
         </nav>
   
-        <div className="md:hidden">
+        <div className="md:hidden mt-5">
           <button onClick={toggleNav}>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 -translate-y-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
           </button>

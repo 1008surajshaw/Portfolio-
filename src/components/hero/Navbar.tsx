@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import {  useLocation } from 'react-router-dom';
 import logo from '../../assets/favicon_io/favicon.ico';
 import { useState } from 'react';
 import { motion } from 'framer-motion';

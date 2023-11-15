@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import {motion,useAnimation} from "framer-motion"
 import uim from "../../assets/userAsset/avatar-smile.webp"
-import CV from "../../assets/SurajCV.pdf"
+import CV from "../../assets/SurajC.V.pdf"
 import {Element} from "react-scroll"
 import bckimg from "../../assets/userAsset/blob vector.png"
 

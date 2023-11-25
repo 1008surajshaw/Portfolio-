@@ -8,13 +8,13 @@ const Socialbar = () => {
     
    
   return (
-    <div className="w-1/15 xl:flex flex-col fixed left-[3rem] top-1/2 gap-7 hidden md:block ">
+    <div className="w-1/15 xl:flex flex-col fixed left-[3rem] top-1/2 gap-7 hidden md:block z-50 ">
     <motion.div className="pb-3"
        whileHover={{ x: 10,scale: 1.5  }}
        initial={{ x: 0 }}
        transition={{ duration: 0.3 }}
       >
-        <a href="mailto:iamsuraj3000@gmail.com">
+        <a href="mailto:iamsuraj3000@gmail.com" target="_blank">
             <BiLogoGmail
                 className="icon"
                 size={30}
@@ -26,7 +26,7 @@ const Socialbar = () => {
      whileHover={{ x: 10 ,scale: 1.5 }}
      initial={{ x: 0 }}
      transition={{ duration: 0.3 }}>
-        <a href="www.linkedin.com/in/suraj-shaw-16675624b">
+        <a href="https://www.linkedin.com/in/suraj-shaw-16675624b" target="_blank">
             <BsLinkedin
                 className="icon" size={30} fill="#0E76A8"
                 
@@ -37,7 +37,7 @@ const Socialbar = () => {
      whileHover={{ x: 10 ,scale: 1.5  }}
      initial={{ x: 0 }}
      transition={{ duration: 0.3 }}>
-        <a href="https://github.com/1008surajshaw">
+        <a href="https://github.com/1008surajshaw" target="_blank">
             <AiFillGithub
                 className="icon " size={30} fill="black"
                 

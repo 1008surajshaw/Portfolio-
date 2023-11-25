@@ -34,7 +34,7 @@ const Work = (props: any) => {
               }
              </div>
              
-          <div className="text-8xl top-0 left-0 m-3 font-extrabold">{index+1}</div>
+        
           </motion.div>
         </motion.div>
       </Link>

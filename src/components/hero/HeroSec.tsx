@@ -22,7 +22,7 @@ const  HeroSec = () => {
       } else {
         clearInterval(intervalId);
       }
-    }, 50); 
+    }, 100); 
 
     return () => clearInterval(intervalId);
   }, [textToType]);
@@ -49,11 +49,21 @@ const  HeroSec = () => {
     <div className="w-screen bg-gradient-to-r from-brown-900 to-pink-600">
       <div className=" flex flex-col lg:flex lg:flex-row-reverse  lg:min-h-screen max-h-fit w-11/12 mx-auto items-center justify-center text-richblack-25 relative pt-16 lg:p-8  ">
 
-        <div className="lg:w-1/2 lg:pr-8 relative z-10">
-          <img src={uim} className="mx-auto relative z-10" width={400} height={400} alt=""/>
-          <motion.img src={bckimg} animate={controls} className="absolute top-[12%] right-[15%] object-cover" width={500} height={500} style={{ zIndex: -1 }} alt="" />
+      <div className="lg:w-1/2 lg:pr-8 relative z-10">
+  
+  <img src={uim} className="mx-auto relative z-10" width={350} height={350} alt="" />
 
-        </div>
+ 
+  <motion.img
+    src={bckimg}
+    animate={controls}
+    className="absolute top-[5%] right-[15%] object-cover lg:flex hidden"
+    width={500}
+    height={500}
+    style={{ zIndex: -1 }}
+    alt=""
+  />
+</div>
 
         <div className="w-full lg:w-1/2 gap-3 leading-6 lg:pl-8 lg:pr-8 overflow-y-hidden">
           <div className="flex gap-2 p-2 items-center">

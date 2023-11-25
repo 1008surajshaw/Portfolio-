@@ -79,18 +79,12 @@ const Project = () => {
 
   ]
   return (
-    <Element name="pro" smooth={true} duration={500}>
-    <div className="w-screen bg-richblue-400 flex justify-center items-center  pb-8 mx-auto">
-    <div className="w-10/12 text-richblack-800 flex flex-col justify-center space-y-6 ">
-    <motion.div
-      className="flex justify-center mx-auto mb-7"
-      initial={{ x: "100vw" }} 
-      animate={{ x: 0 }}
-      transition={{ type: "spring", duration: 10, stiffness: 500 }}
-    >
-      <p className="text-7xl pt-10 mx-auto font-extrabold">Project</p>
-    </motion.div>       
-      <div>
+    <Element name="pro" smooth={true} duration={500} className="bg-richblue-400 w-[100%]">
+    <div className=" flex flex-col pb-8 w-11/12 item-center justify-center mx-auto">
+    <div className="text-4xl p-8 ">
+      <h1 className="flex item-center text-center mx-auto font-extrabold">Project</h1>
+    </div>
+    <div className="w-[80%]">
       {project.map((pro, index) => (
             <div key={index} className={`p-5 `}>
               {/* Use scroller.scrollTo to scroll to the corresponding Work section */}
@@ -99,9 +93,8 @@ const Project = () => {
               </Link>
             </div>
           ))}
-      </div> 
+      </div>
     
-    </div>
     </div>
     </Element>
   );

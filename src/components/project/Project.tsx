@@ -20,7 +20,7 @@ import vsl from "../../assets/stack/Vercel.svg"
 import mui from "../../assets/stack/MaterialUI.svg"
 import cjs from "../../assets/stack/ChartJs.svg"
 import ts from "../../assets/stack/Typescript.svg"
-import {motion} from "framer-motion"
+
 import { Link } from 'react-router-dom';
 
 import { Element, scroller } from 'react-scroll';

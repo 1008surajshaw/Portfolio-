@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import {motion} from "framer-motion"
 
 const Work = (props: any) => {
-  const { pro,index } = props;
+  const { pro } = props;
   return (
     <motion.div
       className=" flex flex-col justify-center mx-auto w-10/12 space-y-5"
